@@ -1,7 +1,14 @@
 # spring_security
 스프링시큐리티 설정 
 
+# 스프링 시큐리티 (XML방식) 에서 다중 auth 에게 권한을 부여하고 싶을때 
+
 # xml 방식으로 시큐리티를 설정하고자 할때
+```xml
+  <security:intercept-url pattern="/mypage_admin/" access="hasAnyRole("ROLE_MEMBER", "ROLE_ADMIN")/>
+
+```
+hasAnyRole 을 사용 
 
 context-security 파일 생성 
 ```xml
